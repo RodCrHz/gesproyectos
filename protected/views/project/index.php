@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Projects',
+	'Proyectos',
 );
 
 $this->menu=array(
-	array('label'=>'Create Project', 'url'=>array('create')),
-	array('label'=>'Manage Projects', 'url'=>array('admin')),
+	array('label'=>'Crear Proyectos', 'url'=>array('create')),
+	array('label'=>'Administrar Proyectos', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Projects</h1>
+<h1>Proyectos</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
@@ -18,7 +18,7 @@ $this->menu=array(
 
 <?php 
 	$this->beginWidget('zii.widgets.CPortlet', array(
-		'title'=>'Recent Comments',
+		'title'=>'Comentarios Recientes',
 	));  
 
 	$this->widget('RecentCommentsWidget');

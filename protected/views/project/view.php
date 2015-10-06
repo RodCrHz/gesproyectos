@@ -1,16 +1,16 @@
 	<?php
 $this->breadcrumbs=array(
-	'Projects'=>array('index'),
+	'Proyectos'=>array('index'),
 	$model->name,
 );
 
 $this->menu=array(
-	array('label'=>'List Projects', 'url'=>array('index')),
-	array('label'=>'Create Project', 'url'=>array('create')),
-	array('label'=>'Update Project', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Project', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Projects', 'url'=>array('admin')),
-	array('label'=>'Create Issue', 'url'=>array('issue/create', 'pid'=>$model->id)),
+	array('label'=>'Listar Proyectos', 'url'=>array('index')),
+	array('label'=>'Crear Proyectos', 'url'=>array('create')),
+	array('label'=>'Actualizar Proyectos', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Borrar Proyecto', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Estas seguro de borrar este proyecto?')),
+	array('label'=>'Administrar Proyectos', 'url'=>array('admin')),
+	array('label'=>'Crear Tarea', 'url'=>array('issue/create', 'pid'=>$model->id)),
 );
 
 if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
@@ -20,7 +20,7 @@ if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
 
 ?>
 
-<h1>View Project #<?php echo $model->id; ?></h1>
+<h1>Vista del Proyecto <?php echo $model->name; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -36,7 +36,7 @@ if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
 )); ?>
 
 <br />
-<h1>Project Issues</h1>
+<h1>Tareas del proyecto</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$issueDataProvider,
@@ -45,7 +45,7 @@ if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
 
 <?php 
 	$this->beginWidget('zii.widgets.CPortlet', array(
-		'title'=>'Recent Comments On This Project',
+		'title'=>'Ultimos comentarios de este proyecto',
 	));  
 	
 	$this->widget('RecentCommentsWidget', array('projectId'=>$model->id));

@@ -5,7 +5,7 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Campos con <span class="required">*</span> son requeridos.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -28,14 +28,14 @@
 	</div>
 	
 	<div class="row">
-		<?php echo $form->label($model,'password_repeat'); ?>
+		<?php echo $form->label($model,'repetir_contraseña'); ?>
 		<?php echo $form->passwordField($model,'password_repeat',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'password_repeat'); ?>
 	</div>
 	
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Crear' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
