@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Issues'=>array('index', 'pid'=>$model->project_id),
-	'Create Issue',
+	'Tareas'=>array('index', 'pid'=>$model->project_id),
+	'Crear Tarea',
 );
 
 $this->menu=array(
-	array('label'=>'List Issues', 'url'=>array('index', 'pid'=>$model->project_id)),
-	array('label'=>'Manage Issues', 'url'=>array('admin', 'pid'=>$model->project_id)),
+	array('label'=>'Listar Tareas', 'url'=>array('index', 'pid'=>$model->project_id)),
+	array('label'=>'Administrar Tareas', 'url'=>array('admin', 'pid'=>$model->project_id)),
 );
 ?>
 
-<h1>Create Issue</h1>
+<h1>Crear Tarea</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

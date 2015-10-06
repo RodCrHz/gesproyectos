@@ -1,21 +1,21 @@
 <?php
 $this->breadcrumbs=array(
 	$model->project->name=>array('project/view', 'id'=>$model->project->id),
-	'Issues'=>array('index'),
+	'Tareas'=>array('index'),
 	$model->name,
 );
 
 $this->menu=array(
-	array('label'=>'List Issues', 'url'=>array('index', 'pid'=>$model->project->id)),
-	array('label'=>'Create Issue', 'url'=>array('create', 'pid'=>$model->project->id)),
-	array('label'=>'Update Issues', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Issue', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Issues', 'url'=>array('admin', 'pid'=>$model->project->id)),
+	array('label'=>'Listar Tareas', 'url'=>array('index', 'pid'=>$model->project->id)),
+	array('label'=>'Crear Tareas', 'url'=>array('create', 'pid'=>$model->project->id)),
+	array('label'=>'Actualizar Tarea', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Borrar Tarea', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Estas seguro de borrar este proyecto?')),
+	array('label'=>'Administrar Tareas', 'url'=>array('admin', 'pid'=>$model->project->id)),
 );
 
 ?>
 
-<h1>View Issue #<?php echo $model->id; ?></h1>
+<h1>Vista de la tarea <?php echo $model->name; ?></h1>
 
 	<?php $this->widget('zii.widgets.CDetailView', array(
 		'data'=>$model,
@@ -47,7 +47,7 @@ $this->menu=array(
    <div id="comments">
 		<?php if($model->commentCount>=1): ?>
 			<h3>
-				<?php echo $model->commentCount>1 ? $model->commentCount . ' comments' : 'One comment'; ?>
+				<?php echo $model->commentCount>1 ? $model->commentCount . ' comentarios' : 'Un Comentario'; ?>
 			</h3>
 
 			<?php $this->renderPartial('_comments',array(
@@ -55,7 +55,7 @@ $this->menu=array(
 			)); ?>
 		<?php endif; ?>
 
-		<h3>Leave a Comment</h3>
+		<h3>Deja un Comentario</h3>
 
 		<?php if(Yii::app()->user->hasFlash('commentSubmitted')): ?>
 			<div class="flash-success">

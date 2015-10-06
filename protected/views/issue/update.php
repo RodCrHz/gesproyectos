@@ -1,18 +1,18 @@
 <?php
 $this->breadcrumbs=array(
-	'Issues'=>array('index'),
+	'Tareas'=>array('index'),
 	$model->name=>array('view','id'=>$model->id),
-	'Update',
+	'Actualizar',
 );
 
 $this->menu=array(
-	array('label'=>'List Issues', 'url'=>array('index', 'pid'=>$model->project->id)),
-	array('label'=>'Create Issue', 'url'=>array('create', 'pid'=>$model->project->id)),
-	array('label'=>'View Issue', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Issues', 'url'=>array('admin', 'pid'=>$model->project->id)),
+	array('label'=>'Listar Tareas', 'url'=>array('index', 'pid'=>$model->project->id)),
+	array('label'=>'Crear Tarea', 'url'=>array('create', 'pid'=>$model->project->id)),
+	array('label'=>'Ver Tarea', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Administrar Tareas', 'url'=>array('admin', 'pid'=>$model->project->id)),
 );
 ?>
 
-<h1>Update Issue <?php echo $model->id; ?></h1>
+<h1>Actualizar Tarea<?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

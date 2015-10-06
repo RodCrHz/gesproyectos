@@ -57,7 +57,7 @@ class Project extends TrackStarActiveRecord
     {
         return array(
             'issues' => array(self::HAS_MANY, 'Issue', 'project_id'),
-            'users' => array(self::MANY_MANY, 'User', 'tbl_project_user_assignment(project_id, user_id)'),
+            'users' => array(self::MANY_MANY, 'User', 'tbl_user(id)'),
         );
     }
    
@@ -71,9 +71,9 @@ class Project extends TrackStarActiveRecord
 			'id' => 'ID',
 			'name' => 'Nombre',
 			'description' => 'Descripción',
-			'create_time' => 'Tiempo de creación',
+			'create_time' => 'Fecha de creación',
 			'create_user_id' => 'Pertenece a',
-			'update_time' => 'Ultima actualizacion',
+			'update_time' => 'Ultima actualización',
 			'update_user_id' => 'Actualizado por',
 		);
 	}
@@ -107,8 +107,9 @@ class Project extends TrackStarActiveRecord
 	 */ 
 	public function getUserOptions()
 	{
-		$usersArray = CHtml::listData($this->users, 'id', 'username');	
-		return $usersArray;
+		$rows = CHtml::listData(User::model()->findAll(),'id','username');
+		
+		return $rows;
 	} 
 	
 	/**

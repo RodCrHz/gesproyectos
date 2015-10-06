@@ -94,17 +94,17 @@ class Issue extends TrackStarActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
-			'description' => 'Description',
-			'project_id' => 'Project',
-			'type_id' => 'Type',
-			'status_id' => 'Status',
-			'owner_id' => 'Owner',
-			'requester_id' => 'Requester',
-			'create_time' => 'Create Time',
-			'create_user_id' => 'Create User',
-			'update_time' => 'Update Time',
-			'update_user_id' => 'Update User',
+			'name' => 'Nombre',
+			'description' => 'Descripción',
+			'project_id' => 'Proyecto',
+			'type_id' => 'Tipo de Proyecto',
+			'status_id' => 'Estado',
+			'owner_id' => 'Asignado a',
+			'requester_id' => 'Solicitado por',
+			'create_time' => 'Fecha de creacion',
+			'create_user_id' => 'Creado por',
+			'update_time' => 'Ultima actualización',
+			'update_user_id' => 'Actualizado por',
 		);
 	}
 
@@ -147,9 +147,9 @@ class Issue extends TrackStarActiveRecord
 	public function getTypeOptions()
 	{
 		return array(
-			self::TYPE_BUG=>'Bug',
-			self::TYPE_FEATURE=>'Feature',
-			self::TYPE_TASK=>'Task',
+			self::TYPE_BUG=>'Desarrollo',
+			self::TYPE_FEATURE=>'Diseño',
+			self::TYPE_TASK=>'Pruebas',
 		);
 	} 
 	
@@ -160,9 +160,9 @@ class Issue extends TrackStarActiveRecord
 	public function getStatusOptions()
 	{
 		return array(
-			self::STATUS_NOT_STARTED=>'Not Yet Started',
-			self::STATUS_STARTED=>'Started',
-			self::STATUS_FINISHED=>'Finished',
+			self::STATUS_NOT_STARTED=>'Sin Iniciar',
+			self::STATUS_STARTED=>'Iniciada',
+			self::STATUS_FINISHED=>'Finalizada',
 		);
 	}
 

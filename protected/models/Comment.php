@@ -75,12 +75,12 @@ class Comment extends TrackStarActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'content' => 'Content',
-			'issue_id' => 'Issue',
-			'create_time' => 'Create Time',
-			'create_user_id' => 'Create User',
-			'update_time' => 'Update Time',
-			'update_user_id' => 'Update User',
+			'content' => 'Contenido',
+			'issue_id' => 'Tarea',
+			'create_time' => 'Fecha de creacion',
+			'create_user_id' => 'Creado por',
+			'update_time' => 'Ultima actualizacion',
+			'update_user_id' => 'Actualizado por',
 		);
 	}
 
