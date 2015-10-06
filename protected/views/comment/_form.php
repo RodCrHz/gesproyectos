@@ -12,7 +12,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Comentar' : 'Guardar'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

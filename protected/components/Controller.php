@@ -49,6 +49,11 @@ class Controller extends CController
 				'controllers'=>array('issue','project','user'),
 				'users'=>array('*'),
 			),
+			array('deny', // allow authenticated user to perform 'create' and 'update' actions
+				'controllers'=>array('comment'),
+				'actions'=>array('create'),
+				'users'=>array('@'),
+			),
 		);
 	}
 }

@@ -7,7 +7,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Listar Comentarios', 'url'=>array('index')),
-	array('label'=>'Crear Comment', 'url'=>array('create')),
+	//array('label'=>'Crear Comment', 'url'=>array('create')),
 	array('label'=>'Ver Comentario', 'url'=>array('view', 'id'=>$model->id)),
 	array('label'=>'Administrar Comentarios', 'url'=>array('admin')),
 );
