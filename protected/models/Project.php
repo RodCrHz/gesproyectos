@@ -72,9 +72,9 @@ class Project extends TrackStarActiveRecord
 			'name' => 'Nombre',
 			'description' => 'Descripción',
 			'create_time' => 'Tiempo de creación',
-			'create_user_id' => 'Create User',
-			'update_time' => 'Update Time',
-			'update_user_id' => 'Update User',
+			'create_user_id' => 'Pertenece a',
+			'update_time' => 'Ultima actualizacion',
+			'update_user_id' => 'Actualizado por',
 		);
 	}
 
