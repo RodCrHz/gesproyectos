@@ -82,13 +82,14 @@ class User extends TrackStarActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+			'username' => 'Usuario',
 			'email' => 'Email',
-			'password' => 'Contrase',
-			'last_login_time' => 'Last Login Time',
-			'create_time' => 'Create Time',
-			'create_user_id' => 'Create User',
-			'update_time' => 'Update Time',
-			'update_user_id' => 'Update User',
+			'password' => 'Contraseña',
+			'last_login_time' => 'Ultimo Login',
+			'create_time' => 'Fecha Creacion',
+			'create_user_id' => 'Creado por',
+			'update_time' => 'Actualizado el',
+			'update_user_id' => 'Actualizado por',
 		);
 	}
 
