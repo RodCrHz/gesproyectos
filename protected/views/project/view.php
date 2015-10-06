@@ -13,10 +13,6 @@ $this->menu=array(
 	array('label'=>'Crear Tarea', 'url'=>array('issue/create', 'pid'=>$model->id)),
 );
 
-if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
-{
-	$this->menu[] = array('label'=>'Add User To Project', 'url'=>array('adduser', 'id'=>$model->id));
-}
 
 ?>
 
@@ -29,9 +25,18 @@ if(Yii::app()->user->checkAccess('createUser',array('project'=>$model)))
 		'name',
 		'description',
 		'create_time',
-		'create_user_id',
+		array(        
+				'name'=>'create_user_id',
+				 'value'=>isset($model->pertenece)?CHtml::encode($model->pertenece->username):"desconocido"
+		    		
+			),
 		'update_time',
-		'update_user_id',
+		array(        
+				'name'=>'update_user_id',
+				 'value'=>isset($model->pertenece)?CHtml::encode($model->pertenece->username):"desconocido"
+		    		
+			),
+		
 	),
 )); ?>
 
