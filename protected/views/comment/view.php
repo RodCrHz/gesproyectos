@@ -22,8 +22,17 @@ $this->menu=array(
 		'content',
 		'issue_id',
 		'create_time',
-		'create_user_id',
+		array(        
+				'name'=>'create_user_id',
+				 'value'=>isset($model->pertenece)?CHtml::encode($model->pertenece->username):"desconocido"
+		    		
+			),
 		'update_time',
-		'update_user_id',
-	),
+		array(        
+				'name'=>'update_user_id',
+				 'value'=>isset($model->pertenece)?CHtml::encode($model->pertenece->username):"desconocido"
+		    		
+			),
+		
+			),
 )); ?>

@@ -65,6 +65,7 @@ class Comment extends TrackStarActiveRecord
 			'updateUser' => array(self::BELONGS_TO, 'User', 'update_user_id'),
 			'issue' => array(self::BELONGS_TO, 'Issue', 'issue_id'),
 			'author' => array(self::BELONGS_TO, 'User', 'create_user_id'),
+			'pertenece' => array(self::BELONGS_TO, 'User', 'create_user_id'),
 		);
 	}
 

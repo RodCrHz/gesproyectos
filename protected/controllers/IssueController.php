@@ -214,7 +214,7 @@ class IssueController extends Controller
 			$comment->attributes=$_POST['Comment'];
 			if($issue->addComment($comment))
 			{
-				Yii::app()->user->setFlash('commentSubmitted',"Your comment has been added." );
+				Yii::app()->user->setFlash('commentSubmitted',"Tu comentario ha sido agregado." );
 				$this->refresh();
 			}
 		}
